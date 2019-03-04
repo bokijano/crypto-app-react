@@ -1,0 +1,16 @@
+.gamesLook {
+  margin-left: 430px;
+  margin-top: 80px;
+}
+
+.linkLook {
+  font-size: 21px;
+  text-decoration: none;
+}
+
+.linkLook:hover {
+  text-decoration: none;
+  font-size: 23px;
+  background: whitesmoke;
+  box-shadow: 5px 5px 10px dodgerblue;
+}
