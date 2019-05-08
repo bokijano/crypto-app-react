@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CurrenciesTable extends Component {
   state = {
     cryptoAmount: "",
-    ownValue: ""
+    activeButton: true
   };
   handleSubmit = e => {
     e.preventDefault();
@@ -17,6 +17,11 @@ class CurrenciesTable extends Component {
   handleChange = e => {
     this.setState({
       cryptoAmount: e.target.value
+    });
+  };
+  deactivateButton = () => {
+    this.setState({
+      activeButton: false
     });
   };
   render() {
@@ -39,15 +44,38 @@ class CurrenciesTable extends Component {
         )}
 
         <td className="fontThree">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              placeholder="Enter amount"
-              value={this.state.cryptoAmount}
-              onChange={this.handleChange}
-            />
-            <button className="btn btn-default">Submit</button>
-          </form>
+          {this.state.activeButton ? (
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                placeholder="Enter amount"
+                value={this.state.cryptoAmount}
+                onChange={this.handleChange}
+              />
+              <button
+                style={{ marginLeft: "5px" }}
+                onClick={this.deactivateButton}
+                className="btn btn-info"
+              >
+                Submit
+              </button>
+            </form>
+          ) : (
+            <form>
+              <input
+                type="text"
+                disabled={true}
+                value={this.state.cryptoAmount}
+              />
+              <button
+                style={{ marginLeft: "5px" }}
+                className="btn btn-warning"
+                disabled={true}
+              >
+                Disabled
+              </button>
+            </form>
+          )}
         </td>
         <td className="fontThree">
           $ {(price * this.state.cryptoAmount).toFixed(2)}

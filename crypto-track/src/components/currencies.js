@@ -20,12 +20,10 @@ class Currencies extends Component {
     console.log(ownCurrencies);
     console.log(this.state.ownCurrency);
   };
-  //   findCurrency = id => {
 
-  //  };
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "100px" }} className="container">
         <h2 className="fontTwo">
           Top 50 Cryptocurrencies by Market Capitalization
         </h2>
