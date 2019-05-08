@@ -1,0 +1,51 @@
+.fontTwo {
+  font-family: "Modak", cursive;
+  text-align: center;
+  text-shadow: 3px 3px 6px #333;
+}
+.fontThree {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+.fontFour {
+  font-family: "Pacifico", cursive;
+}
+
+.table-head {
+  font-family: "Gugi", cursive;
+  text-align: center;
+  font-weight: bolder;
+  box-shadow: 5px 5px 10px #333;
+}
+
+.navbar-head {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  margin-left: 200px;
+  margin-top: -15px;
+  display: block;
+  color: dodgerblue;
+  text-shadow: 3px 3px 5px dodgerblue;
+}
+
+.counter {
+  background-color: dodgerblue;
+  color: whitesmoke;
+  width: 50px;
+  height: 60px;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5px;
+  margin-left: -30px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px dodgerblue;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-head {
+    display: none;
+  }
+}
